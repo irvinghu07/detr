@@ -1,0 +1,11 @@
+{
+  "model": "detr_resnet101",
+  "confidence_threshold": 0.0,
+  "num_images": 5000,
+  "num_processed": 5000,
+  "num_detections": 440799,
+  "timestamp": "2025-11-25T10:18:58.681130",
+  "inference_time_seconds": 569.0085859298706,
+  "device": "cuda",
+  "batch_size": 1
+}
