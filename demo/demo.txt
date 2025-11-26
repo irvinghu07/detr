@@ -1,0 +1,39 @@
+Script started on 2025-11-26 07:45:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="135" LINES="36"]
+ ______                 ______            _
+(_____ \               (_____ \          | |
+ _____) ) _   _  ____   _____) )___    __| |
+|  __  / | | | ||  _ \ |  ____// _ \  / _  |
+| |  \ \ | |_| || | | || |    | |_| |( (_| |
+|_|   |_||____/ |_| |_||_|     \___/  \____|
+
+For detailed documentation and guides, please visit:
+[1;34mhttps://docs.runpod.io/[0m and [1;34mhttps://blog.runpod.io/[0m
+
+
+[?2004h]0;root@e4e62b9d78b7: /workspace/detrroot@e4e62b9d78b7:/workspace/detr# python demo/demo..[Kpy 
+[?2004lUsing device: cuda
+Loading DETR model...
+Using cache found in /root/.cache/torch/hub/facebookresearch_detr_main
+/usr/local/lib/python3.11/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Fetching image from http://images.cocodataset.org/val2017/000000039769.jpg...
+Image size: (640, 480)
+
+Running inference...
+
+Detected 4 objects (confidence > 0.7):
+------------------------------------------------------------
+  cat             | confidence: 0.999 | bbox: (0.254, 0.543, 0.471, 0.866)
+  remote          | confidence: 0.905 | bbox: (0.168, 0.195, 0.209, 0.090)
+  bed             | confidence: 0.884 | bbox: (0.500, 0.614, 1.000, 0.748)
+  cat             | confidence: 0.997 | bbox: (0.772, 0.407, 0.456, 0.720)
+
+============================================================
+Success! DETR is running without COCO dependencies.
+============================================================
+[?2004h]0;root@e4e62b9d78b7: /workspace/detrroot@e4e62b9d78b7:/workspace/detr# exit
+[?2004lexit
+
+Script done on 2025-11-26 07:45:51+00:00 [COMMAND_EXIT_CODE="0"]
