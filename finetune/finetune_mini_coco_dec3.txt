@@ -1,0 +1,245 @@
+Script started on 2025-11-26 09:42:33+00:00 [TERM="screen" TTY="/dev/pts/1" COLUMNS="135" LINES="35"]
+ ______                 ______            _
+(_____ \               (_____ \          | |
+ _____) ) _   _  ____   _____) )___    __| |
+|  __  / | | | ||  _ \ |  ____// _ \  / _  |
+| |  \ \ | |_| || | | || |    | |_| |( (_| |
+|_|   |_||____/ |_| |_||_|     \___/  \____|
+
+For detailed documentation and guides, please visit:
+[1;34mhttps://docs.runpod.io/[0m and [1;34mhttps://blog.runpod.io/[0m
+
+
+[?2004hroot@e4e62b9d78b7:/workspace/detr# exitpython finetune/finetune_mini_coco_dec3.py
+[?2004lUsing device: cuda
+loading annotations into memory...
+Done (t=0.67s)
+creating index...
+index created!
+Total images: 5000
+Train images: 4000
+Val images:   1000
+/usr/local/lib/python3.11/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading checkpoint from /workspace/detr/detr-r50-e632da11.pth ...
+/workspace/detr/finetune/finetune_mini_coco_dec3.py:157: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  ckpt = torch.load(ckpt_path, map_location="cpu")
+Checkpoint loaded with strict=False.
+  Missing keys: 0
+  Unexpected keys: 54
+Epoch [1/5] Iter [50/2000] Loss: 112.4064
+Epoch [1/5] Iter [100/2000] Loss: 108.3612
+Epoch [1/5] Iter [150/2000] Loss: 107.4525
+Epoch [1/5] Iter [200/2000] Loss: 103.7770
+Epoch [1/5] Iter [250/2000] Loss: 100.5028
+Epoch [1/5] Iter [300/2000] Loss: 88.9223
+Epoch [1/5] Iter [350/2000] Loss: 82.0288
+Epoch [1/5] Iter [400/2000] Loss: 80.7320
+Epoch [1/5] Iter [450/2000] Loss: 80.5736
+Epoch [1/5] Iter [500/2000] Loss: 66.2416
+Epoch [1/5] Iter [550/2000] Loss: 65.6742
+Epoch [1/5] Iter [600/2000] Loss: 73.0110
+Epoch [1/5] Iter [650/2000] Loss: 72.1088
+Epoch [1/5] Iter [700/2000] Loss: 74.8492
+Epoch [1/5] Iter [750/2000] Loss: 66.8203
+Epoch [1/5] Iter [800/2000] Loss: 60.2845
+Epoch [1/5] Iter [850/2000] Loss: 65.7040
+Epoch [1/5] Iter [900/2000] Loss: 63.3677
+Epoch [1/5] Iter [950/2000] Loss: 60.0781
+Epoch [1/5] Iter [1000/2000] Loss: 62.1945
+Epoch [1/5] Iter [1050/2000] Loss: 62.5839
+Epoch [1/5] Iter [1100/2000] Loss: 56.7115
+Epoch [1/5] Iter [1150/2000] Loss: 63.3336
+Epoch [1/5] Iter [1200/2000] Loss: 61.1642
+Epoch [1/5] Iter [1250/2000] Loss: 63.2580
+Epoch [1/5] Iter [1300/2000] Loss: 62.8301
+Epoch [1/5] Iter [1350/2000] Loss: 55.3289
+Epoch [1/5] Iter [1400/2000] Loss: 61.5187
+Epoch [1/5] Iter [1450/2000] Loss: 56.3678
+Epoch [1/5] Iter [1500/2000] Loss: 59.4451
+Epoch [1/5] Iter [1550/2000] Loss: 55.7979
+Epoch [1/5] Iter [1600/2000] Loss: 67.5981
+Epoch [1/5] Iter [1650/2000] Loss: 63.1433
+Epoch [1/5] Iter [1700/2000] Loss: 63.0958
+Epoch [1/5] Iter [1750/2000] Loss: 60.7478
+Epoch [1/5] Iter [1800/2000] Loss: 65.9616
+Epoch [1/5] Iter [1850/2000] Loss: 59.3049
+Epoch [1/5] Iter [1900/2000] Loss: 56.4085
+Epoch [1/5] Iter [1950/2000] Loss: 60.5109
+Epoch [1/5] Iter [2000/2000] Loss: 54.6021
+Epoch 1: val loss = 53.9390
+Saved checkpoint: /workspace/detr/detr_r50_mini_finetune_epoch1.pth
+Epoch [2/5] Iter [50/2000] Loss: 48.4439
+Epoch [2/5] Iter [100/2000] Loss: 50.2462
+Epoch [2/5] Iter [150/2000] Loss: 48.2248
+Epoch [2/5] Iter [200/2000] Loss: 56.1363
+Epoch [2/5] Iter [250/2000] Loss: 45.8462
+Epoch [2/5] Iter [300/2000] Loss: 46.8729
+Epoch [2/5] Iter [350/2000] Loss: 48.1953
+Epoch [2/5] Iter [400/2000] Loss: 46.6905
+Epoch [2/5] Iter [450/2000] Loss: 52.9881
+Epoch [2/5] Iter [500/2000] Loss: 61.4536
+Epoch [2/5] Iter [550/2000] Loss: 56.8715
+Epoch [2/5] Iter [600/2000] Loss: 55.8536
+Epoch [2/5] Iter [650/2000] Loss: 47.3543
+Epoch [2/5] Iter [700/2000] Loss: 58.7110
+Epoch [2/5] Iter [750/2000] Loss: 56.4111
+Epoch [2/5] Iter [800/2000] Loss: 62.3919
+Epoch [2/5] Iter [850/2000] Loss: 52.4873
+Epoch [2/5] Iter [900/2000] Loss: 57.6080
+Epoch [2/5] Iter [950/2000] Loss: 57.8622
+Epoch [2/5] Iter [1000/2000] Loss: 63.1610
+Epoch [2/5] Iter [1050/2000] Loss: 65.9780
+Epoch [2/5] Iter [1100/2000] Loss: 64.7434
+Epoch [2/5] Iter [1150/2000] Loss: 55.2291
+Epoch [2/5] Iter [1200/2000] Loss: 58.3304
+Epoch [2/5] Iter [1250/2000] Loss: 65.7091
+Epoch [2/5] Iter [1300/2000] Loss: 68.9914
+Epoch [2/5] Iter [1350/2000] Loss: 52.1330
+Epoch [2/5] Iter [1400/2000] Loss: 51.2677
+Epoch [2/5] Iter [1450/2000] Loss: 56.7664
+Epoch [2/5] Iter [1500/2000] Loss: 59.6875
+Epoch [2/5] Iter [1550/2000] Loss: 59.7767
+Epoch [2/5] Iter [1600/2000] Loss: 55.1445
+Epoch [2/5] Iter [1650/2000] Loss: 58.3751
+Epoch [2/5] Iter [1700/2000] Loss: 53.5287
+Epoch [2/5] Iter [1750/2000] Loss: 57.3157
+Epoch [2/5] Iter [1800/2000] Loss: 53.1028
+Epoch [2/5] Iter [1850/2000] Loss: 56.5042
+Epoch [2/5] Iter [1900/2000] Loss: 55.5382
+Epoch [2/5] Iter [1950/2000] Loss: 54.5865
+Epoch [2/5] Iter [2000/2000] Loss: 58.3456
+Epoch 2: val loss = 58.3513
+Saved checkpoint: /workspace/detr/detr_r50_mini_finetune_epoch2.pth
+Epoch [3/5] Iter [50/2000] Loss: 54.8067
+Epoch [3/5] Iter [100/2000] Loss: 55.6690
+Epoch [3/5] Iter [150/2000] Loss: 49.9014
+Epoch [3/5] Iter [200/2000] Loss: 49.5012
+Epoch [3/5] Iter [250/2000] Loss: 50.7465
+Epoch [3/5] Iter [300/2000] Loss: 49.2019
+Epoch [3/5] Iter [350/2000] Loss: 51.6666
+Epoch [3/5] Iter [400/2000] Loss: 54.0903
+Epoch [3/5] Iter [450/2000] Loss: 50.1477
+Epoch [3/5] Iter [500/2000] Loss: 56.6190
+Epoch [3/5] Iter [550/2000] Loss: 49.5774
+Epoch [3/5] Iter [600/2000] Loss: 53.5841
+Epoch [3/5] Iter [650/2000] Loss: 48.3591
+Epoch [3/5] Iter [700/2000] Loss: 47.5867
+Epoch [3/5] Iter [750/2000] Loss: 49.8924
+Epoch [3/5] Iter [800/2000] Loss: 51.6483
+Epoch [3/5] Iter [850/2000] Loss: 53.9553
+Epoch [3/5] Iter [900/2000] Loss: 52.6603
+Epoch [3/5] Iter [950/2000] Loss: 46.1131
+Epoch [3/5] Iter [1000/2000] Loss: 52.9833
+Epoch [3/5] Iter [1050/2000] Loss: 49.3359
+Epoch [3/5] Iter [1100/2000] Loss: 49.5204
+Epoch [3/5] Iter [1150/2000] Loss: 51.5402
+Epoch [3/5] Iter [1200/2000] Loss: 58.1662
+Epoch [3/5] Iter [1250/2000] Loss: 48.7662
+Epoch [3/5] Iter [1300/2000] Loss: 55.3054
+Epoch [3/5] Iter [1350/2000] Loss: 62.8533
+Epoch [3/5] Iter [1400/2000] Loss: 51.0965
+Epoch [3/5] Iter [1450/2000] Loss: 58.5273
+Epoch [3/5] Iter [1500/2000] Loss: 47.4120
+Epoch [3/5] Iter [1550/2000] Loss: 47.2856
+Epoch [3/5] Iter [1600/2000] Loss: 63.9002
+Epoch [3/5] Iter [1650/2000] Loss: 61.5547
+Epoch [3/5] Iter [1700/2000] Loss: 53.3148
+Epoch [3/5] Iter [1750/2000] Loss: 49.5371
+Epoch [3/5] Iter [1800/2000] Loss: 46.8475
+Epoch [3/5] Iter [1850/2000] Loss: 51.5915
+Epoch [3/5] Iter [1900/2000] Loss: 60.7201
+Epoch [3/5] Iter [1950/2000] Loss: 56.3726
+Epoch [3/5] Iter [2000/2000] Loss: 59.3776
+Epoch 3: val loss = 57.9353
+Saved checkpoint: /workspace/detr/detr_r50_mini_finetune_epoch3.pth
+Epoch [4/5] Iter [50/2000] Loss: 39.6689
+Epoch [4/5] Iter [100/2000] Loss: 46.5593
+Epoch [4/5] Iter [150/2000] Loss: 50.7260
+Epoch [4/5] Iter [200/2000] Loss: 44.7699
+Epoch [4/5] Iter [250/2000] Loss: 46.5397
+Epoch [4/5] Iter [300/2000] Loss: 48.7957
+Epoch [4/5] Iter [350/2000] Loss: 46.3194
+Epoch [4/5] Iter [400/2000] Loss: 50.5602
+Epoch [4/5] Iter [450/2000] Loss: 47.8736
+Epoch [4/5] Iter [500/2000] Loss: 53.1533
+Epoch [4/5] Iter [550/2000] Loss: 44.6526
+Epoch [4/5] Iter [600/2000] Loss: 55.9563
+Epoch [4/5] Iter [650/2000] Loss: 50.0622
+Epoch [4/5] Iter [700/2000] Loss: 54.6230
+Epoch [4/5] Iter [750/2000] Loss: 51.1798
+Epoch [4/5] Iter [800/2000] Loss: 49.2171
+Epoch [4/5] Iter [850/2000] Loss: 46.2481
+Epoch [4/5] Iter [900/2000] Loss: 48.1765
+Epoch [4/5] Iter [950/2000] Loss: 52.7595
+Epoch [4/5] Iter [1000/2000] Loss: 49.0312
+Epoch [4/5] Iter [1050/2000] Loss: 53.2043
+Epoch [4/5] Iter [1100/2000] Loss: 43.3297
+Epoch [4/5] Iter [1150/2000] Loss: 55.0978
+Epoch [4/5] Iter [1200/2000] Loss: 55.0747
+Epoch [4/5] Iter [1250/2000] Loss: 55.6138
+Epoch [4/5] Iter [1300/2000] Loss: 47.2690
+Epoch [4/5] Iter [1350/2000] Loss: 47.7079
+Epoch [4/5] Iter [1400/2000] Loss: 53.0979
+Epoch [4/5] Iter [1450/2000] Loss: 47.4875
+Epoch [4/5] Iter [1500/2000] Loss: 55.6476
+Epoch [4/5] Iter [1550/2000] Loss: 46.3775
+Epoch [4/5] Iter [1600/2000] Loss: 53.3785
+Epoch [4/5] Iter [1650/2000] Loss: 50.7500
+Epoch [4/5] Iter [1700/2000] Loss: 58.2605
+Epoch [4/5] Iter [1750/2000] Loss: 50.9085
+Epoch [4/5] Iter [1800/2000] Loss: 49.4323
+Epoch [4/5] Iter [1850/2000] Loss: 55.7374
+Epoch [4/5] Iter [1900/2000] Loss: 53.3319
+Epoch [4/5] Iter [1950/2000] Loss: 51.8046
+Epoch [4/5] Iter [2000/2000] Loss: 55.6530
+Epoch 4: val loss = 52.5055
+Saved checkpoint: /workspace/detr/detr_r50_mini_finetune_epoch4.pth
+Epoch [5/5] Iter [50/2000] Loss: 43.4512
+Epoch [5/5] Iter [100/2000] Loss: 43.7309
+Epoch [5/5] Iter [150/2000] Loss: 52.0785
+Epoch [5/5] Iter [200/2000] Loss: 48.6086
+Epoch [5/5] Iter [250/2000] Loss: 50.1625
+Epoch [5/5] Iter [300/2000] Loss: 48.0714
+Epoch [5/5] Iter [350/2000] Loss: 46.1891
+Epoch [5/5] Iter [400/2000] Loss: 46.8733
+Epoch [5/5] Iter [450/2000] Loss: 42.8091
+Epoch [5/5] Iter [500/2000] Loss: 46.8415
+Epoch [5/5] Iter [550/2000] Loss: 38.9718
+Epoch [5/5] Iter [600/2000] Loss: 48.5542
+Epoch [5/5] Iter [650/2000] Loss: 49.6009
+Epoch [5/5] Iter [700/2000] Loss: 53.0595
+Epoch [5/5] Iter [750/2000] Loss: 43.0514
+Epoch [5/5] Iter [800/2000] Loss: 43.3162
+Epoch [5/5] Iter [850/2000] Loss: 49.2338
+Epoch [5/5] Iter [900/2000] Loss: 41.9169
+Epoch [5/5] Iter [950/2000] Loss: 49.3055
+Epoch [5/5] Iter [1000/2000] Loss: 49.7500
+Epoch [5/5] Iter [1050/2000] Loss: 45.7061
+Epoch [5/5] Iter [1100/2000] Loss: 48.1167
+Epoch [5/5] Iter [1150/2000] Loss: 43.7079
+Epoch [5/5] Iter [1200/2000] Loss: 49.0337
+Epoch [5/5] Iter [1250/2000] Loss: 44.9664
+Epoch [5/5] Iter [1300/2000] Loss: 37.4098
+Epoch [5/5] Iter [1350/2000] Loss: 40.6957
+Epoch [5/5] Iter [1400/2000] Loss: 46.0910
+Epoch [5/5] Iter [1450/2000] Loss: 50.9471
+Epoch [5/5] Iter [1500/2000] Loss: 47.3394
+Epoch [5/5] Iter [1550/2000] Loss: 47.8050
+Epoch [5/5] Iter [1600/2000] Loss: 52.0418
+Epoch [5/5] Iter [1650/2000] Loss: 55.1832
+Epoch [5/5] Iter [1700/2000] Loss: 49.9003
+Epoch [5/5] Iter [1750/2000] Loss: 55.0507
+Epoch [5/5] Iter [1800/2000] Loss: 52.4416
+Epoch [5/5] Iter [1850/2000] Loss: 50.2283
+Epoch [5/5] Iter [1900/2000] Loss: 49.0493
+Epoch [5/5] Iter [1950/2000] Loss: 50.2755
+Epoch [5/5] Iter [2000/2000] Loss: 46.6854
+Epoch 5: val loss = 58.4209
+Saved checkpoint: /workspace/detr/detr_r50_mini_finetune_epoch5.pth
+[?2004hroot@e4e62b9d78b7:/workspace/detr# exit
+[?2004lexit
+
+Script done on 2025-11-26 10:03:53+00:00 [COMMAND_EXIT_CODE="0"]
